@@ -3,10 +3,10 @@
 <div class="row">
   <div class="col">
     <!-- accedo al array de objetos characterList del ListComponent y le paso el array de objetos characters del servicio-->
-    <dbz-list [characterList]="dbzService.characters" (onDeleteCharacter)="dbzService.deleteCharacter($event)"></dbz-list>
+    <dbz-list [characterList]="characters" (onDeleteCharacter)="onDeleteCharacterById($event)"></dbz-list>
   </div>
   <div class="col">
-    <!-- accede al evento onNewCharacter del AddCharacterComponent y obtiene el dato emitido en el servicio -->
-    <dbz-add-character (onNewCharacter)="dbzService.onNewCharacter($event)"></dbz-add-character>
+    <!-- accede al evento onNewCharacter del AddCharacterComponent y obtiene el dato emitido en el servicio  -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
   </div>
 </div>

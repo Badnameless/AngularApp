@@ -13,17 +13,17 @@ export class AddCharacterComponent {
   public onNewCharacter: EventEmitter<Character> = new EventEmitter();
 
   public character:Character = {
+    id: '',
     name: '',
-    power: 0
+    power: 0,
   };
 
   emitCharacter():void{
-    console.log(this.character);
-
     if(this.character.name.length == 0) return;
 
     this.onNewCharacter.emit({...this.character}); // Utilizamos emit(data) para emitir la informacion
 
+    this.character.id = '';
     this.character.name = '';
     this.character.power = 0;
   }
