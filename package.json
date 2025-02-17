@@ -7,9 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:href": "del ./docs && ng build --base-href ./ && copyfiles docs/browser/* ./docs -f && del ./docs/browser",
-    "copy:dist": "",
-    "del:browser": ""
+    "build:github": "del ./docs && ng build --base-href ./ && copyfiles dist/bases/* ./docs -f && copyfiles dist/bases/browser/* ./docs -f && copyfiles docs/browser/* ./docs -f && del dist"
   },
   "private": true,
   "dependencies": {
