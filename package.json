@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:href": "ng build --base-href ./",
-    "del:docs": "del docs",
-    "copy:dist": "copyfiles dist/docs/* ./docs"
+    "copy:dist": "copyfiles docs/browser/* ./docs -f",
+    "del:browser": "del ./docs/browser"
   },
   "private": true,
   "dependencies": {
